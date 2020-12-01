@@ -1,5 +1,3 @@
-# SwiftUIProject
-
 # SwiftUI Basics
 
 What is SwiftUI? What is new, and how to use new tools to develop UI with new technology? You can find answers in a  [presentation](https://drive.google.com/file/d/1yIuvXiRWaWZ7rgrR5hdwUAEMPaVfXysx/view?usp=sharing) or [video](https://web.microsoftstream.com/video/a5c3f4be-a47e-4d3e-ab27-1f1b3fd66d50).
