@@ -38,7 +38,8 @@ struct WelcomeMessageView_Previews: PreviewProvider {
 ```
 
 **Description**
-```The first thing to notice is that WelcomeView is a struct that implements the View protocol. Yes, View is now a protocol, and very simple. The only thing you have to do, WelcomeView, is to declare the body variable. All your subviews and custom views must support the View protocol, that is, they must have a body variable. The content of the body closure: some View {…} is the description of what will be displayed on the screen.
+```
+The first thing to notice is that WelcomeView is a struct that implements the View protocol. Yes, View is now a protocol, and very simple. The only thing you have to do, WelcomeView, is to declare the body variable. All your subviews and custom views must support the View protocol, that is, they must have a body variable. The content of the body closure: some View {…} is the description of what will be displayed on the screen.
 ```
 
 # Modifiers 
@@ -93,7 +94,8 @@ Containers are the same View, but they have a peculiarity. You pass some content
 
 # Property Wrappers
 
-```Swift 5.1 introduces so-called property wrappers (or property delegates). In SwiftUI, property wrappers are used to update or bind one of the view parameters to our own variable.
+```
+Swift 5.1 introduces so-called property wrappers (or property delegates). In SwiftUI, property wrappers are used to update or bind one of the view parameters to our own variable.
 @State
 @Binding
 @ObservedObject
@@ -125,7 +127,8 @@ struct FlightBoard: View {
 }
 ```
 **Description**
-```@State is a wrapper that we can use to indicate the state of the View. SwiftUI will store it in a special internal memory outside of the View structure. Only the associated View can access it. As soon as the @State property value changes, SwiftUI rebuilds the View to account for the state changes.
+```
+@State is a wrapper that we can use to indicate the state of the View. SwiftUI will store it in a special internal memory outside of the View structure. Only the associated View can access it. As soon as the @State property value changes, SwiftUI rebuilds the View to account for the state changes.
 ```
 
 # @Binding 
@@ -144,18 +147,21 @@ struct FlightFilterView: View {
 }
 ```
 **Description**
-```@Binding provides access by reference for a value type. Sometimes we need to make the state of our View available to its children. But we can't just take and pass that value, since it's a value type, and Swift will pass a copy of that value. This is where the @Binding property wrapper comes in handy.
+```
+@Binding provides access by reference for a value type. Sometimes we need to make the state of our View available to its children. But we can't just take and pass that value, since it's a value type, and Swift will pass a copy of that value. This is where the @Binding property wrapper comes in handy.
 ```
 # @ObservedObject
 
 **Description**
-```@ObservedObject works similarly to @State, but the main difference is that we can split it between several independent Views that can subscribe and observe changes to this object, and as soon as changes appear, SwiftUI rebuilds all views associated with this object.
+```
+@ObservedObject works similarly to @State, but the main difference is that we can split it between several independent Views that can subscribe and observe changes to this object, and as soon as changes appear, SwiftUI rebuilds all views associated with this object.
 ```
 
 # @ENVIRONMENTOBJECT
 
 **Description**
-```Instead of passing an ObservableObject through the init method of our View, we can implicitly inject it into the Environment of our View hierarchy. By doing this, we make it possible for all child views of the current Environment to access this ObservableObject.
+```
+Instead of passing an ObservableObject through the init method of our View, we can implicitly inject it into the Environment of our View hierarchy. By doing this, we make it possible for all child views of the current Environment to access this ObservableObject.
 ```
 
 # @Environment 
@@ -174,7 +180,8 @@ struct CalendarView: View {
 
 ```
 **Description**
-```We can pass custom objects to Environment View hierarchies inside SwiftUI. But SwiftUI already has an Environment filled with system-wide settings. We can easily access them using the @Environment wrapper.
+```
+We can pass custom objects to Environment View hierarchies inside SwiftUI. But SwiftUI already has an Environment filled with system-wide settings. We can easily access them using the @Environment wrapper.
 By tagging our properties with the @Environment wrapper, we access and subscribe to system-wide changes. As soon as the Locale, Calendar or ColorScheme system changes, SwiftUI recreates our CalendarView.
 ```
 
