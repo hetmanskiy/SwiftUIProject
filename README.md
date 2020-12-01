@@ -38,6 +38,8 @@ struct WelcomeMessageView_Previews: PreviewProvider {
 ```
 
 **Description**
+
+
 The first thing to notice is that WelcomeView is a struct that implements the View protocol. Yes, View is now a protocol, and very simple. The only thing you have to do, WelcomeView, is to declare the body variable. All your subviews and custom views must support the View protocol, that is, they must have a body variable. The content of the body closure: some View {…} is the description of what will be displayed on the screen.
 
 # Modifiers 
@@ -67,6 +69,7 @@ extension View {
 }
 ```
 **Description**
+
 A modifier is a function of the View itself, which returns self, having previously performed some modifications. With this code, we have created a structure that conforms to the ViewModifier protocol. This protocol requires us to implement the body () function in this structure, at the input of which there will be some Content, and at the output - some View: the same type as the body parameter of our View.
 
 # Stack
@@ -84,6 +87,7 @@ HStack {
 }
 ```
 **Description**
+
 Containers are the same View, but they have a peculiarity. You pass some content to them that you want to display. The whole trick of the container is that it must somehow group and display the elements of this content. In this sense, containers are similar to modifiers, with the only difference that modifiers are intended to change one ready-made View, and containers build these Views (content elements, or blocks of declarative syntax) in a specific order, for example, vertically or horizontally (VStack {.. .} HStack {...}).
 
 
